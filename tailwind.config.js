@@ -71,6 +71,7 @@ module.exports = {
           frame: "#F7F7F7",
         },
         recruitinn: { accent: "#F6F5FA" },
+        "heavy-metal": "#2C2C2C",
       },
     },
   },
