@@ -6,9 +6,9 @@ export const metadata = {
 
 function Login() {
     return (
-        <div>
+        <>
             <Heading>Login page</Heading>
-        </div>
+        </>
     )
 }
 

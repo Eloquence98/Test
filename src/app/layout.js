@@ -1,12 +1,13 @@
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 // import "./globals.css";
 import "@/styles/globals.css";
 
-const poppins = Poppins({
+const satoshi = localFont({
+  src: "../fonts/satoshi/satoshi-regular.woff2",
   subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+  display: 'swap',
+  variable: "--font-satoshi",
+})
 
 export const metadata = {
   title: {
@@ -19,9 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-heavy-metal max-h-[100dvh] overflow-hidden">
-      <body className={`${poppins.className} max-w-[90em] mx-auto p-3 !pr-[calc(0.75rem-12px)] body-scroll bg-neutral-white rounded-[48px] h-[100dvh] overflow-x-hidden overflow-y-scroll`}>
-        <main className="p-[6px] size-full bg-bg-frame rounded-[36px] ">
-          <div className="p-[6px] size-full  rounded-[32px]">
+      <body className={`${satoshi.className} max-w-[90em] mx-auto p-3 !pr-[calc(0.75rem-12px)] body-scroll bg-neutral-white rounded-[48px] h-[100dvh] overflow-x-hidden overflow-y-scroll`}>
+        <main className="p-[6px] min-h-full bg-bg-frame rounded-[36px] ">
+          <div className="p-[6px] rounded-[32px]">
             {children}
           </div>
         </main>

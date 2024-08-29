@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+// example
 
 export const getProductById = async function (id) {
   try {
